@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+#downloads {
+  display: none; }
+
+#screen::after, #tools::after {
+  display: block;
+  content: "";
+  overflow: hidden;
+  clear: both; }
+
+#tools {
+  padding: 0 10px; }
+  #tools > * {
+    float: right; }
+
+#screen {
+  background-color: #fff;
+  margin: 0;
+  padding: 0; }
+  #screen > div {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; }
+    #screen > div.form > textarea {
+      width: 95%; }
+    #screen > div.canvas > svg {
+      max-width: 100%; }
+  #screen.vertical > div {
+    width: 100%; }
+
