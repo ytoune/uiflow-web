@@ -5,12 +5,13 @@
     "push-page": "gh-pages -d dist",
     "build": "webpack --config webpack.prod.js",
     "watch": "webpack --watch --config webpack.dev.js",
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --config webpack.dev.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@babel/core": "^7.1.2",
     "@babel/plugin-syntax-object-rest-spread": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "babel-loader": "^8.0.4",
     "css-loader": "^1.0.0",
@@ -19,10 +20,13 @@
     "gh-pages": "^2.0.1",
     "html-loader": "^0.5.5",
     "mini-css-extract-plugin": "^0.4.4",
+    "node-libs-browser": "^2.1.0",
     "node-sass": "^4.9.3",
     "rxjs": "^6.3.3",
     "sass-loader": "^7.1.0",
+    "stream-to-promise": "^2.2.0",
     "uiflow": "^1.1.8",
+    "util": "^0.11.0",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2"
   },

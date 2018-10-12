@@ -1,13 +1,21 @@
 <!doctype html>
-<html lang=ja>
+<html lang="ja">
 <head>
-	<meta charset=utf-8>
+	<meta charset="utf-8">
 	<title>UIFlow Web</title>
-	<meta name=viewport content=width=device-width,initial-scale=1>
-	<link rel=stylesheet type=text/css href=style.css>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div id=screen></div>
-	<script src=app.js></script>
+	<div id="tools">
+		<label for="direction"><input type="checkbox" id="direction">縦モード</label>
+		<a id="download-btn" href="#start-download">ダウンロード</a>
+	</div>
+	<div id="screen">
+		<div class="form"><textarea rows="40"></textarea></div>
+		<div class="canvas"></div>
+	</div>
+	<div id="downloads"></div>
+	<script src="app.js"></script>
 </body>
 </html>

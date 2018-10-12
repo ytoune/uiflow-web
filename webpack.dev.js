@@ -1,5 +1,5 @@
 
 module.exports = {
-	...require('./webpack.config'),
+	...require('./webpack.prod'),
 	mode: 'development',
 }
