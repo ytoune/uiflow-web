@@ -1,0 +1,56 @@
+parser: '@typescript-eslint/parser'
+parserOptions:
+  tsconfigRootDir: ./
+  sourceType: module
+env:
+  node: true
+  jest: true
+plugins:
+  - prettier
+  - '@typescript-eslint'
+extends:
+  - plugin:@typescript-eslint/eslint-recommended
+  - plugin:@typescript-eslint/recommended
+  # - plugin:import/typescript
+  - prettier
+  - prettier/@typescript-eslint
+  - plugin:prettier/recommended
+  # - eslint:recommended
+  # - 'plugin:@typescript-eslint/eslint-recommended'
+  # - 'plugin:@typescript-eslint/recommended'
+  # - plugin:prettier/recommended
+rules:
+  yoda: [error, always, { onlyEquality: true, exceptRange: true }]
+  complexity: [error, 10]
+  no-use-before-define: 0
+  '@typescript-eslint/no-use-before-define': [error, {
+    functions: false,
+    classes: false,
+    variables: false,
+  }]
+  '@typescript-eslint/explicit-function-return-type': off
+  '@typescript-eslint/explicit-module-boundary-types': off
+  '@typescript-eslint/member-delimiter-style': off
+  '@typescript-eslint/no-explicit-any': [warn, { fixToUnknown: true }]
+  '@typescript-eslint/no-var-requires': off
+  '@typescript-eslint/no-unused-vars': [warn, {
+    varsIgnorePattern: '^_',
+    argsIgnorePattern: '^_',
+    caughtErrorsIgnorePattern: '^_',
+    ignoreRestSiblings: true,
+  }]
+  '@typescript-eslint/ban-ts-comment': off
+  '@typescript-eslint/ban-types': [error, {
+    extendDefaults: true,
+    types: {
+      '{}': false,
+      object: false,
+    }
+  }]
+overrides:
+  - files: ['*.tsx']
+    rules:
+      '@typescript-eslint/no-unused-vars': off
+  - files: ['*.ts', '*.tsx']
+    rules:
+      '@typescript-eslint/no-var-requires': error

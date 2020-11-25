@@ -1,4 +1,3 @@
-
 export const initCode = `
 
 [最初に]

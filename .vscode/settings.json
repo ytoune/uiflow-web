@@ -1,0 +1,15 @@
+{
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.enable": true,
+  "eslint.nodePath": "node_modules",
+  "eslint.options": {
+    "configFile": ".eslintrc.yml",
+    "resolvePluginsRelativeTo": "node_modules"
+  },
+  "eslint.workingDirectories": ["*"],
+  "editor.rulers": [80],
+  "typescript.tsdk": "node_modules/typescript/lib",
+}
